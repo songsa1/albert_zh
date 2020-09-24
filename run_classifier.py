@@ -947,4 +947,5 @@ if __name__ == "__main__":
   flags.mark_flag_as_required("bert_config_file")
   flags.mark_flag_as_required("output_dir")
   tf.app.run()
-  # 'python run_classifier.py   --task_name=lcqmc_pair   --do_train=true   --do_eval=true   --data_dir=D:\code\albert_zh\data   --vocab_file=D:\code\albert_zh\albert_config\vocab.txt --bert_config_file=D:\code\albert_zh\albert_config\albert_config_tiny.json --max_seq_length=128 --train_batch_size=4   --learning_rate=1e-4  --num_train_epochs=5 --output_dir=D:\code\albert_zh\output\albert_lcqmc_checkpoints --init_checkpoint=D:\code\albert_tiny_489k\albert_model.ckpt'
+
+  'python run_classifier.py   --task_name=lcqmc_pair   --do_train=true   --do_eval=true   --data_dir=D:/code/NLP/albert_zh\data   --vocab_file=D:/code/NLP/albert_zh/albert_config/vocab.txt  --bert_config_file=D:/code/NLP/albert_zh/albert_config/albert_config_tiny.json --max_seq_length=128 --train_batch_size=4   --learning_rate=1e-4  --num_train_epochs=5 --output_dir=D:/code/NLP/albert_zh\output/albert_lcqmc_checkpoints --init_checkpoint=D:\code/NLP/albert_tiny_489k/albert_model.ckpt'
