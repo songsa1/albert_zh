@@ -1,0 +1,64 @@
+***** Eval results F:/code/NLP/NLP_job/albert_zh/output/albert_song_1_checkpoints\model.ckpt-0 *****
+auc = 0.6202411
+eval_accuracy = 0.62026983
+eval_loss = 0.67794555
+global_step = 0
+loss = 0.6779435
+precision = 0.75253457
+recall = 0.35827118
+***** Eval results F:/code/NLP/NLP_job/albert_zh/output/albert_song_1_checkpoints\model.ckpt-500 *****
+auc = 0.9089642
+eval_accuracy = 0.9089613
+eval_loss = 0.26024064
+global_step = 500
+loss = 0.2601787
+precision = 0.8883333
+recall = 0.935498
+***** Eval results F:/code/NLP/NLP_job/albert_zh/output/albert_song_1_checkpoints\model.ckpt-1000 *****
+auc = 0.9037031
+eval_accuracy = 0.9036964
+eval_loss = 0.33743733
+global_step = 1000
+loss = 0.33736715
+precision = 0.8599374
+recall = 0.9644581
+***** Eval results F:/code/NLP/NLP_job/albert_zh/output/albert_song_1_checkpoints\model.ckpt-1500 *****
+auc = 0.9289238
+eval_accuracy = 0.92892396
+eval_loss = 0.2664906
+global_step = 1500
+loss = 0.2664058
+precision = 0.93042713
+recall = 0.92716104
+***** Eval results F:/code/NLP/NLP_job/albert_zh/output/albert_song_1_checkpoints\model.ckpt-2000 *****
+auc = 0.9309005
+eval_accuracy = 0.9308983
+eval_loss = 0.2794682
+global_step = 2000
+loss = 0.27937844
+precision = 0.914346
+recall = 0.9508556
+***** Eval results F:/code/NLP/NLP_job/albert_zh/output/albert_song_1_checkpoints\model.ckpt-2500 *****
+auc = 0.92727554
+eval_accuracy = 0.9272787
+eval_loss = 0.2908228
+global_step = 2500
+loss = 0.2907289
+precision = 0.95322317
+recall = 0.89863974
+***** Eval results F:/code/NLP/NLP_job/albert_zh/output/albert_song_1_checkpoints\model.ckpt-3000 *****
+auc = 0.93429756
+eval_accuracy = 0.9342986
+eval_loss = 0.27362978
+global_step = 3000
+loss = 0.27354145
+precision = 0.9427421
+recall = 0.9247477
+***** Eval results F:/code/NLP/NLP_job/albert_zh/output/albert_song_1_checkpoints\model.ckpt-3414 *****
+auc = 0.9342977
+eval_accuracy = 0.9342986
+eval_loss = 0.27438697
+global_step = 3414
+loss = 0.27429837
+precision = 0.94116336
+recall = 0.9265028

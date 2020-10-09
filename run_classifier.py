@@ -94,10 +94,10 @@ flags.DEFINE_float(
     "E.g., 0.1 = 10% of training.")
 
 # 多久保存一次检查点
-flags.DEFINE_integer("save_checkpoints_steps", 1000,
+flags.DEFINE_integer("save_checkpoints_steps", 500,
                      "How often to save the model checkpoint.")
 
-flags.DEFINE_integer("iterations_per_loop", 1000,
+flags.DEFINE_integer("iterations_per_loop", 500,
                      "How many steps to make in each estimator call.")
 
 flags.DEFINE_bool("use_tpu", False, "Whether to use TPU or GPU/CPU.")
@@ -543,6 +543,7 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
                 precision = tf.metrics.precision(labels=label_ids, predictions=predictions, weights=is_real_example)  # 精准率
                 recall = tf.metrics.recall(labels=label_ids, predictions=predictions, weights=is_real_example)  # 召回率
 
+
                 # precision, precision_update_op = tf.metrics.precision(labels=labels,
                 #                                                       predictions=predictions,
                 #                                                       name='precision')
@@ -795,6 +796,7 @@ def main(_):
     # Cloud TPU: Invalid TPU configuration, ensure ClusterResolver is passed to tpu.
     print("###tpu_cluster_resolver:", tpu_cluster_resolver)
     run_config = tf.contrib.tpu.RunConfig(
+        keep_checkpoint_max=10000,
         cluster=tpu_cluster_resolver,
         master=FLAGS.master,
         model_dir=FLAGS.output_dir,
@@ -979,5 +981,4 @@ if __name__ == "__main__":
     flags.mark_flag_as_required("output_dir")
     tf.app.run()
 
-    # 'python run_classifier.py   --task_name=lcqmc_pair   --do_train=true   --do_eval=true   --data_dir=D:/code/NLP/albert_zh\data   --vocab_file=D:/code/NLP/albert_zh/albert_config/vocab.txt  --bert_config_file=D:/code/NLP/albert_zh/albert_config/albert_config_tiny.json --max_seq_length=128 --train_batch_size=4   --learning_rate=2e-5  --num_train_epochs=10 --output_dir=D:/code/NLP/albert_zh\output/albert_song_1_checkpoints --init_checkpoint=D:\code/NLP/albert_tiny_489k/albert_model.ckpt'
-    # 'python run_classifier.py   --task_name=lcqmc_pair   --do_predict=true   --data_dir=D:/code/NLP/albert_zh\data   --vocab_file=D:/code/NLP/albert_zh/albert_config/vocab.txt  --bert_config_file=D:/code/NLP/albert_zh/albert_config/albert_config_tiny.json --max_seq_length=128 --train_batch_size=4   --learning_rate=1e-4  --num_train_epochs=5 --output_dir=D:/code/NLP/albert_zh\output/aaa --init_checkpoint=D:/code/NLP/albert_zh/output/albert_lcqmc_checkpoints\model.ckpt-11448'
+    # 'python run_classifier.py   --task_name=lcqmc_pair   --do_train=true   --do_eval=true   --data_dir=F:/code/NLP/NLP_job/albert_zh/data   --vocab_file=F:/code/NLP/NLP_job/albert_zh/albert_config/vocab.txt  --bert_config_file=F:/code/NLP/NLP_job/albert_zh/albert_config/albert_config_tiny.json --max_seq_length=128 --train_batch_size=4   --learning_rate=1e-5  --num_train_epochs=10 --output_dir=F:/code/NLP/NLP_job/albert_zh/output/albert_song_1_checkpoints --init_checkpoint=F:/code/NLP/albert_tiny_489k/albert_model.ckpt'
